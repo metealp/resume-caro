@@ -17,7 +17,7 @@ export default (props) => {
         }
     }
     const introLine1 = <p>Please unfasten your mindbelt. First, we need to strech your mind a little bit</p>
-    const congratsLine = <p>Congratulations my smart love! Like your rivers, you crossed so many lives and impressed all of them!</p>
+    const congratsLine = <p>Congratulations my smart love! Like your rivers, you crossed so many lives and impressed all of them! You can start swiping ---&gt; </p>
 
     const formDiv = 
         <div id='riddleFormContainer'>

@@ -1,7 +1,9 @@
 import { useState, useRef } from 'react'
 
 import { Carousel, Image } from 'antd';
-
+import {
+    HeartFilled,
+  } from '@ant-design/icons';
 import Riddle from './Riddle';
 
 const slideContainerStyle = {
@@ -14,12 +16,12 @@ export default () => {
     const slider = useRef();
     const afterChange = (current) => {
         setSliderIndex(current)
-        if (current === 2) {
-            setInterval(() => {
-                if (sliderIndex === 4) return;
-                slider.current.next()
-            }, 4000)
-        }
+        // if (current === 2) {
+        //     setInterval(() => {
+        //         if (sliderIndex === 4) return;
+        //         slider.current.next()
+        //     }, 34000)
+        // }
     }
 
     return (
@@ -42,7 +44,7 @@ export default () => {
             {/* Exorcist Section */}
             <div style={slideContainerStyle}>
                 <div className='slide-explanation'>
-                    Thank you for being my personal exorcist...
+                    You have proved your many skills last year, such as exorcising.
                 </div>
             </div>
             <div style={slideContainerStyle}>
@@ -54,9 +56,7 @@ export default () => {
             {/* Driver Section */}
             <div style={slideContainerStyle}>
                 <div className='slide-explanation'>
-                    <p>Drive fast, fall hard, I'll keep you in my heart</p>
-                    <p>Don't worry about tomorrow, don't mind the scars</p>
-                    <p>Just drive fast, fall hard</p>
+                    <p>And performance driving.</p>
                 </div>
             </div>
             <div style={slideContainerStyle}>
@@ -65,10 +65,17 @@ export default () => {
                     src={new URL("./images/driver.jpg", import.meta.url).href}
                 />
             </div>
+            <div style={slideContainerStyle}>
+                <div className='slide-explanation'>
+                    <p>Drive fast, fall hard, I'll keep you in my heart</p>
+                    <p>Don't worry about tomorrow, don't mind the scars</p>
+                    <p>Just drive fast, fall hard</p>
+                </div>
+            </div>
             {/* Full Moon */}
             <div style={slideContainerStyle}>
                 <div className='slide-explanation'>
-                    You always shine under the moonlight...
+                    You were the shiniest under the full moon!
                 </div>
             </div>
             <div style={slideContainerStyle}>
@@ -80,25 +87,13 @@ export default () => {
             {/* Lajos */}
             <div style={slideContainerStyle}>
                 <div className='slide-explanation'>
-                    Lajos is happy with what you are doing while aging
+                    Someone else is also happy with what you are doing while aging
                 </div>
             </div>
             <div style={slideContainerStyle}>
                 <Image
                     rootClassName="slideImage"
                     src={new URL("./images/Lajos-bff.jpg", import.meta.url).href}
-                />
-            </div>
-            {/* Lake tilter */}
-            <div style={slideContainerStyle}>
-                <div className='slide-explanation'>
-                    You have tilted a lot of lakes when you were 20...
-                </div>
-            </div>
-            <div style={slideContainerStyle}>
-                <Image
-                    rootClassName="slideImage"
-                    src={new URL("./images/lake-tilter.jpg", import.meta.url).href}
                 />
             </div>
             {/* Mother Eagle */}
@@ -116,7 +111,7 @@ export default () => {
             {/* Red Dragon */}
             <div style={slideContainerStyle}>
                 <div className='slide-explanation'>
-                    Even transformed to the Red Dragon
+                    And unlocked the Red Dragon inside you.
                 </div>
             </div>
             <div style={slideContainerStyle}>
@@ -128,7 +123,7 @@ export default () => {
             {/* Risk Taker */}
             <div style={slideContainerStyle}>
                 <div className='slide-explanation'>
-                    You have been always a daredevil.
+                    It was not easy but you have been always a daredevil.
                 </div>
             </div>
             <div style={slideContainerStyle}>
@@ -140,7 +135,7 @@ export default () => {
             {/* Sleeping Beauty */}
             <div style={slideContainerStyle}>
                 <div className='slide-explanation'>
-                    Of course, just in dreams
+                    Of course, only in dreams :)
                 </div>
             </div>
             <div style={slideContainerStyle}>
@@ -149,22 +144,10 @@ export default () => {
                     src={new URL("./images/sleeping-beauty.jpg", import.meta.url).href}
                 />
             </div>
-            {/* Twisted fate */}
-            <div style={slideContainerStyle}>
-                <div className='slide-explanation'>
-                    This year you also mastered the cards and how to twist your fate!
-                </div>
-            </div>
-            <div style={slideContainerStyle}>
-                <Image
-                    rootClassName="slideImage"
-                    src={new URL("./images/twisted-fate.jpg", import.meta.url).href}
-                />
-            </div>
             {/* Spring Summoner */}
             <div style={slideContainerStyle}>
                 <div className='slide-explanation'>
-                    Bringing the spring is not the most astonishing skill of yours, yet everyone needs to calm in between battlecries!
+                    Everyone needs to rest in between battles! But one day, you brought the spring by simply waking up from your dreams. 
                 </div>
             </div>
             <div style={slideContainerStyle}>
@@ -173,7 +156,24 @@ export default () => {
                     src={new URL("./images/spring-summoner.jpg", import.meta.url).href}
                 />
             </div>
+            {/* Twisted fate */}
+            <div style={slideContainerStyle}>
+                <div className='slide-explanation'>
+                    You also mastered the cards and how to twist your fate by top-decking!
+                </div>
+            </div>
+            <div style={slideContainerStyle}>
+                <Image
+                    rootClassName="slideImage"
+                    src={new URL("./images/twisted-fate.jpg", import.meta.url).href}
+                />
+            </div>
             {/* outro */}
+            <div style={slideContainerStyle}>
+                <div className='slide-explanation'>
+                    HAPPY BIRTHDAY!<HeartFilled style={{color: 'red'}}/>
+                </div>
+            </div>
             <div style={slideContainerStyle}>
                 <div className='slide-explanation'>
                     I wish I could spend my all time to perfectioning this but, hey!
