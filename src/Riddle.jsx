@@ -6,14 +6,13 @@ export default (props) => {
     const [isInputDisabled, setIsInputDisabled] = useState(false)
 
     const timerForNextPage = () => (setTimeout(() => {
-        props.turnNextPage()
     }, 6000))
-
+    
     const onChange = (event) => {
         const normalizedValue = event.target.value ? event.target.value.toLowerCase() : '' 
-        if(normalizedValue.includes('river')) {
+        if(normalizedValue.includes(theAnswer)) {
             setIsInputDisabled(true)
-            timerForNextPage()
+            props.setCarouselAutoPlay()
         }
     }
     const introLine1 = <p>Please unfasten your mindbelt. First, we need to strech your mind a little bit</p>

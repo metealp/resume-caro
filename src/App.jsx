@@ -13,27 +13,24 @@ const slideContainerStyle = {
 
 export default () => {
     const [sliderIndex, setSliderIndex] = useState(1)
+    const [shouldAutoPlay, setShouldAutoPlay] = useState(false)
     const slider = useRef();
     const afterChange = (current) => {
         setSliderIndex(current)
-        // if (current === 2) {
-        //     setInterval(() => {
-        //         if (sliderIndex === 4) return;
-        //         slider.current.next()
-        //     }, 34000)
-        // }
     }
 
     return (
         <Carousel
             ref={ref => { slider.current = ref }}
             afterChange={afterChange}
-            effect="scrollx"
+            effect="fade"
             dots={false}
+            autoplay={shouldAutoPlay}
+            autoplaySpeed={3500}
         >
             {/* Intro */}
             <div style={slideContainerStyle}>
-                <Riddle turnNextPage={()=> slider.current.next()} />
+                <Riddle turnNextPage={()=> slider.current.next()} setCarouselAutoPlay={() => setShouldAutoPlay(true)} />
             </div>
             <div style={slideContainerStyle}>
                 <Image
@@ -172,6 +169,11 @@ export default () => {
             <div style={slideContainerStyle}>
                 <div className='slide-explanation'>
                     HAPPY BIRTHDAY!<HeartFilled style={{color: 'red'}}/>
+                </div>
+            </div>
+            <div style={slideContainerStyle}>
+                <div className='slide-explanation'>
+                    It looks like you are already aging like a fine wine!
                 </div>
             </div>
             <div style={slideContainerStyle}>
