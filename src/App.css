@@ -1,0 +1,33 @@
+@import '../node_modules/antd/dist/antd.css';
+
+#riddleContainer {
+    width: 100vw;
+    margin: auto;
+    text-align: center;
+    padding: 25vh 20px;
+}
+#riddleFormContainer {
+    width: 100%;
+    /* height: 100vh; */
+    margin: auto;
+}
+@media screen and (min-width:720px) {
+    /* Noch größer, noch mehr Regeln */
+    #riddleContainer {
+        width: 50vw;
+    }
+    #riddleFormContainer {
+        width: 80%;
+    }
+}
+.slideImage {
+    margin: auto;
+    width: 100%;
+}
+
+.slideImage .ant-image-img {
+    height: 100vh;
+    object-fit: contain;
+}
+
+
